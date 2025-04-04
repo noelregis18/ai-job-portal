@@ -1,9 +1,6 @@
-
 import { Github, Twitter, Instagram } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-gray-300">
+  return <footer className="bg-gray-900 text-gray-300">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
@@ -21,7 +18,7 @@ const Footer = () => {
                 <Github size={18} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={18} />
+                
               </a>
             </div>
           </div>
@@ -70,8 +67,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
