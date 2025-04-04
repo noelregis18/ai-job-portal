@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Get more done with <span className="text-gradient">weekday.works</span>
+              Get more done with <span className="text-gradient">                   All in Jobs</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               The all-in-one workspace for your tasks, calendar, and documents.
