@@ -1,4 +1,6 @@
+
 import { Github, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+
 const Footer = () => {
   return <footer className="bg-gray-900 text-gray-300">
       <div className="container-custom py-12 md:py-16">
@@ -26,8 +28,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-white mb-4">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Roadmap</a></li>
             </ul>
           </div>
@@ -35,20 +37,18 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="mailto:noel.regis04@gmail.com" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="https://jobs.weekday.works/?jobsTab=search" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="tel:+917319546900" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="mailto:noel.regis04@gmail.com" className="hover:text-white transition-colors">Help Center</a></li>
               <li><a href="https://platform.openai.com/docs/overview" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Documentation</a></li>
               <li><a href="https://platform.openai.com/docs/api-reference/introduction" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">API Reference</a></li>
-              
             </ul>
           </div>
         </div>
@@ -80,4 +80,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;

@@ -31,31 +31,42 @@ const ChatBot = () => {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
 
     try {
-      // Call OpenAI API through Supabase Edge Function
-      const response = await fetch(
-        'https://pevfeprooxtsfalprpom.supabase.co/functions/v1/ask-openai',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ 
-            prompt: userMessage,
-            chatHistory: messages
-          }),
-        }
-      );
+      // Use GPT-4 API for responses instead of the Edge Function
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: [
+            { 
+              role: 'system', 
+              content: 'You are a helpful assistant for a job platform called All in Jobs. Provide concise and helpful responses.' 
+            },
+            ...messages.map(msg => ({
+              role: msg.role,
+              content: msg.content
+            })),
+            { role: 'user', content: userMessage }
+          ],
+          temperature: 0.7,
+          max_tokens: 500
+        }),
+      });
 
       if (!response.ok) {
-        throw new Error('Failed to get response');
+        throw new Error(`API error: ${response.status}`);
       }
 
       const data = await response.json();
+      const assistantResponse = data.choices[0].message.content;
       
       // Add AI response to chat
       setMessages(prev => [
         ...prev,
-        { role: 'assistant', content: data.generatedText || 'Sorry, I could not process your request' }
+        { role: 'assistant', content: assistantResponse }
       ]);
 
     } catch (error) {
@@ -68,7 +79,7 @@ const ChatBot = () => {
       
       setMessages(prev => [
         ...prev,
-        { role: 'assistant', content: 'Sorry, there was an error processing your request. Please try again.' }
+        { role: 'assistant', content: 'Sorry, I\'m having trouble connecting to the server. Please try again later or contact support.' }
       ]);
     } finally {
       setIsLoading(false);

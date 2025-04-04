@@ -24,7 +24,7 @@ const Pricing = () => {
       price: "$0",
       description: "Perfect for individuals just getting started",
       buttonText: "Get Started",
-      buttonLink: "https://app.stripe.com/payment",
+      buttonLink: "https://razorpay.com/",
       features: [
         { included: true, text: "Up to 10 projects" },
         { included: true, text: "Basic calendar" },
@@ -39,7 +39,7 @@ const Pricing = () => {
       price: "$10",
       description: "For professionals who need more power",
       buttonText: "Get Pro",
-      buttonLink: "https://app.stripe.com/payment",
+      buttonLink: "https://razorpay.com/",
       popular: true,
       features: [
         { included: true, text: "Unlimited projects" },
@@ -55,7 +55,7 @@ const Pricing = () => {
       price: "$25",
       description: "For teams that need to collaborate seamlessly",
       buttonText: "Get Business",
-      buttonLink: "https://app.stripe.com/payment",
+      buttonLink: "https://razorpay.com/",
       features: [
         { included: true, text: "Unlimited projects" },
         { included: true, text: "Advanced calendar" },
