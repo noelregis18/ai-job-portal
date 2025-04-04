@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-blue-50 to-white">
+  return <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-blue-50 to-white">
       <div className="container-custom">
         <div className="flex flex-col items-center text-center">
           <div className="max-w-3xl mx-auto space-y-4 animate-fade-in">
@@ -26,20 +23,11 @@ const Hero = () => {
 
           <div className="mt-16 md:mt-20 w-full max-w-5xl mx-auto relative">
             <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-              <img 
-                src="/placeholder.svg" 
-                alt="Weekday.works dashboard" 
-                className="w-full h-auto"
-                style={{
-                  animation: 'float 6s ease-in-out infinite',
-                }} 
-              />
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
