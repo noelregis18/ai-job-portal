@@ -12,10 +12,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={18} />
+                
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github size={18} />
+                
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 
