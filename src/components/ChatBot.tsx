@@ -31,28 +31,15 @@ const ChatBot = () => {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
 
     try {
-      // Use GPT-4 API for responses instead of the Edge Function
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      // Use our Edge Function instead of calling OpenAI directly
+      const response = await fetch('https://dlkgbwrlhfxlgcnludzr.supabase.co/functions/v1/ask-openai', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
-          messages: [
-            { 
-              role: 'system', 
-              content: 'You are a helpful assistant for a job platform called All in Jobs. Provide concise and helpful responses.' 
-            },
-            ...messages.map(msg => ({
-              role: msg.role,
-              content: msg.content
-            })),
-            { role: 'user', content: userMessage }
-          ],
-          temperature: 0.7,
-          max_tokens: 500
+          prompt: userMessage,
+          chatHistory: messages
         }),
       });
 
@@ -61,7 +48,7 @@ const ChatBot = () => {
       }
 
       const data = await response.json();
-      const assistantResponse = data.choices[0].message.content;
+      const assistantResponse = data.generatedText;
       
       // Add AI response to chat
       setMessages(prev => [
