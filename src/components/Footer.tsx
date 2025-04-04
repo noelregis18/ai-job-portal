@@ -1,13 +1,11 @@
-
 import { Github, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
   return <footer className="bg-gray-900 text-gray-300">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
-              <span className="font-extrabold text-xl text-white">weekday.works</span>
+              <span className="font-extrabold text-xl text-white">All in Jobs</span>
             </div>
             <p className="text-sm text-gray-400 mb-4">
               Your all-in-one workspace for getting work done better.
