@@ -48,7 +48,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
               <li><a href="https://platform.openai.com/docs/overview" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Documentation</a></li>
               <li><a href="https://platform.openai.com/docs/api-reference/introduction" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
+              
             </ul>
           </div>
         </div>
