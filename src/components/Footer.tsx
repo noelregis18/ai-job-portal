@@ -56,9 +56,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-gray-800 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Weekday.works. All rights reserved.
-            </div>
+            
             <div className="flex space-x-6">
               <a href="#" className="hover:text-white transition-colors">Terms</a>
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
