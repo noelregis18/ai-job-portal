@@ -15,21 +15,21 @@ const Testimonials = () => {
   
   const testimonials: Testimonial[] = [
     {
-      name: "Sarah Johnson",
+      name: "Rajesh Sharma",
       role: "Product Manager",
-      company: "TechCorp",
+      company: "Tech Mahindra",
       content: "Weekday.works has completely transformed how our team organizes and executes projects. The seamless integration between the calendar, tasks, and documents has increased our productivity by at least 30%.",
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Priya Patel",
       role: "Creative Director",
-      company: "Design Studio",
+      company: "Design Studio Mumbai",
       content: "As a creative team, we need tools that don't get in the way of our process. Weekday.works provides just the right amount of structure while being flexible enough for our creative workflows.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
+      name: "Vikram Singh",
       role: "Freelance Consultant",
       company: "Self-employed",
       content: "Managing multiple clients and projects became so much easier with Weekday.works. I can track my time, organize my tasks, and communicate with clients all in one place.",

@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
+import ChatBot from "../components/ChatBot";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Testimonials />
       <Pricing />
       <Footer />
+      <ChatBot />
     </div>
   );
 };
